@@ -12,9 +12,11 @@ USER_POOL_ID=$(aws cognito-idp create-user-pool \
           "RequireSymbols": false
         }
       }' \
-  --schema '[
+
+#replace with email
+  --schema '[ 
       {
-        "Name": "phone_number",
+        "Name": "phone_number", 
         "StringAttributeConstraints": {
             "MinLength": "0",
             "MaxLength": "2048"
